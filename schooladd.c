@@ -24,31 +24,24 @@ int cgiMain()
 		}
 	fclose(fd);*/
 fprintf(cgiOut, "Content-type:text/html;charset=utf-8\n\n");
-	char cid[5] = "\0";
-	char cname[10] = "\0";
 	char scid[5] = "\0";
+	char scname[20] = "\0";
 	int status = 0;
 
-	status = cgiFormString("cid",  cid, 5);
-	if (status != cgiFormSuccess)
-	{
-		fprintf(cgiOut, "get cid error!\n");
-		return 1;
-	}
-
-	status = cgiFormString("cname",  cname, 10);
-	if (status != cgiFormSuccess)
-	{
-		fprintf(cgiOut, "get cname error!\n");
-		return 1;
-	}
-
-	status = cgiFormString("scid",scid, 5);
+	status = cgiFormString("scid",  scid, 5);
 	if (status != cgiFormSuccess)
 	{
 		fprintf(cgiOut, "get scid error!\n");
 		return 1;
 	}
+
+	status = cgiFormString("scname",  scname, 20);
+	if (status != cgiFormSuccess)
+	{
+		fprintf(cgiOut, "get scname error!\n");
+		return 1;
+	}
+
 
 
 	//fprintf(cgiOut, "name = %s, age = %s, stuId = %s\n", name, age, stuId);
@@ -90,7 +83,7 @@ fprintf(cgiOut, "Content-type:text/html;charset=utf-8\n\n");
 */
 
 
-		sprintf(sql, "insert into course values('%s','%s','%s',0)", cid, cname,scid);
+		sprintf(sql, "insert into school values('%s','%s')", scid, scname);
 		if (mysql_real_query(db, sql, strlen(sql) + 1) != 0)
 		{
 			fprintf(cgiOut, "%s\n", mysql_error(db));
@@ -100,7 +93,7 @@ fprintf(cgiOut, "Content-type:text/html;charset=utf-8\n\n");
 
 
 
-	fprintf(cgiOut, "add course ok!\n");
+	fprintf(cgiOut, "add school ok!\n");
 	mysql_close(db);
 	return 0;
 }
