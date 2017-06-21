@@ -1,7 +1,7 @@
 CC=gcc
 AFLAGS=-Wall -g
 LDFLAGS= -lmysqlclient
-OBJS= add.cgi del.cgi mod.cgi sel.cgi selsc.cgi
+OBJS= add.cgi del.cgi mod.cgi sel.cgi selsc.cgi coradd.cgi
 
 all:$(OBJS)
 

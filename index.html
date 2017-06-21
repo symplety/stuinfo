@@ -45,6 +45,9 @@
                 <button>添加学生信息</button>
             </div>
             <div class="text-center col-md-3 col-sm-6">
+                <button>添加课程信息</button>
+            </div>
+            <div class="text-center col-md-3 col-sm-6">
                 <button>查询学生成绩信息</button>
             </div>
             <div class="text-center col-md-3 col-sm-6">
@@ -105,6 +108,34 @@
                 </form>
             </li>
             <li>
+                <form class="form-horizontal" method="get" action="/cgi-bin/sx/coradd.cgi">
+                    <div class="form-group">
+                        <label for="cid" class="col-sm-2 control-label">课程号</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="cid" class="form-control" id="cid" placeholder="请输入课程号">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cname" class="col-sm-2 control-label">课程名称</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="cname" class="form-control" id="cname" placeholder="请输入学生姓名">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="scid" class="col-sm-2 control-label">学生所属学院编号</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="scid" class="form-control" id="stuId" placeholder="请输入学生所属学院编号">
+                        </div>
+                    </div>
+
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success">提交</button>
+                        <button type="reset" class="btn btn-success">重置</button>
+                    </div>
+                </form>
+            </li>
+            <li>
                 <form class="form-horizontal" method="get" action="/cgi-bin/sx/selsc.cgi">
                     <div class="form-group">
                         <label for="id-sel" class="col-sm-2 control-label">输入学号查询</label>
@@ -129,7 +160,7 @@
                     <div class="form-group">
                         <label for="name-mod" class="col-sm-2 control-label">学生姓名</label>
                         <div class="col-sm-10">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="请输入学生姓名">
+                            <input type="text" name="name" class="form-control" id="name-mod" placeholder="请输入学生姓名">
                         </div>
                     </div>
                     <div class="form-group">
