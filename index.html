@@ -48,6 +48,9 @@
                 <button>添加课程信息</button>
             </div>
             <div class="text-center col-md-3 col-sm-6">
+                <button>添加学生成绩</button>
+            </div>
+            <div class="text-center col-md-3 col-sm-6">
                 <button>查询学生成绩信息</button>
             </div>
             <div class="text-center col-md-3 col-sm-6">
@@ -99,8 +102,6 @@
                             <input type="text" name="scid" class="form-control" id="stuId" placeholder="请输入学生所属学院编号">
                         </div>
                     </div>
-
-
                     <div class="text-center">
                         <button type="submit" class="btn btn-success">提交</button>
                         <button type="reset" class="btn btn-success">重置</button>
@@ -124,7 +125,34 @@
                     <div class="form-group">
                         <label for="scid" class="col-sm-2 control-label">学生所属学院编号</label>
                         <div class="col-sm-10">
-                            <input type="text" name="scid" class="form-control" id="stuId" placeholder="请输入学生所属学院编号">
+                            <input type="text" name="scid" class="form-control" id="scid" placeholder="请输入学生所属学院编号">
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success">提交</button>
+                        <button type="reset" class="btn btn-success">重置</button>
+                    </div>
+                </form>
+            </li>
+
+            <li>
+                <form class="form-horizontal" method="get" action="/cgi-bin/sx/scoreadd.cgi">
+                    <div class="form-group">
+                        <label for="id" class="col-sm-2 control-label">学生学号</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="id" class="form-control" id="id" placeholder="请输入学号">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cid" class="col-sm-2 control-label">课程号</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="cid" class="form-control" id="cid" placeholder="请输入课程号">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="score" class="col-sm-2 control-label">成绩</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="score" class="form-control" id="score" placeholder="请输入成绩">
                         </div>
                     </div>
 
@@ -135,6 +163,9 @@
                     </div>
                 </form>
             </li>
+
+
+
             <li>
                 <form class="form-horizontal" method="get" action="/cgi-bin/sx/selsc.cgi">
                     <div class="form-group">
@@ -149,6 +180,12 @@
                     </div>
                 </form>
             </li>
+
+
+
+
+
+
             <li>
                 <form class="form-horizontal" method="get" action="/cgi-bin/sx/mod.cgi">
                   <div class="form-group">
