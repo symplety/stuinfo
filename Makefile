@@ -12,6 +12,7 @@ $(OBJS):%.cgi:%.c
 clean:
 	rm ./.gitinore/*.cgi
 install:
-		sudo cp ./index.html /var/www/html/
+		sudo cp *.html /var/www/html/
 		mv *.cgi  ./.gitinore
 		cp ./.gitinore/*.cgi /usr/lib/cgi-bin/sx
+		cp *.html  /usr/lib/cgi-bin/sx
