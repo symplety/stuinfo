@@ -50,11 +50,11 @@ int cgiMain()
 
 	if (id[0] == '*')
 	{
-		sprintf(sql, "select * from information");
+		sprintf(sql, "select * from information where information.statu = 0");
 	}
 	else
 	{
-		sprintf(sql, "select * from information where id = '%s'", id);
+		sprintf(sql, "select * from information where id = '%s' and information.statu = 1", id);
 	}
 
 

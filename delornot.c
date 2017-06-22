@@ -8,15 +8,15 @@ char * foot= "footer.html";
 
 
 
+
 int cgiMain()
 {
 
-	fprintf(cgiOut, "Content-type:text/html;charset=utf-8\n\n");
   FILE * fd;
   char ch;
-  fprintf(cgiOut, "Content-type:text/html;charset=utf-8\n\n");
-  fd=fopen("head.html", "r");
-  if(fd==NULL){
+ fprintf(cgiOut, "Content-type:text/html;charset=utf-8\n\n");
+ fd=fopen("head.html", "r");
+ if(fd==NULL){
      fprintf(cgiOut, "Cannot open file,head.html \n");
      return -1;
    }
@@ -26,7 +26,9 @@ int cgiMain()
      fprintf(cgiOut, "%c", ch);
      ch = fgetc(fd);
    }
-  fclose(fd);
+ fclose(fd);
+	fprintf(cgiOut, "Content-type:text/html;charset=utf-8\n\n");
+
 	char stuId[32] = "\0";
 	int status = 0;
 
@@ -62,7 +64,7 @@ int cgiMain()
 	}
 
 
-	sprintf(sql,"delete from  information  where id='%s' and statu=0", stuId);
+	sprintf(sql,"update information set statu=1 where id='%s'", stuId);
 	if ((ret = mysql_real_query(db, sql, strlen(sql) + 1)) != 0)
 	{
 		fprintf(cgiOut,"mysql_real_query fail:%s\n", mysql_error(db));
@@ -75,4 +77,5 @@ int cgiMain()
 	mysql_close(db);
 
 	return 0;
+
 }

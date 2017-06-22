@@ -9,7 +9,7 @@ char * foot= "footer.html";
 
 int cgiMain()
 {
-	FILE * fd;
+FILE * fd;
 	 char ch;
 	fprintf(cgiOut, "\n\n");
 	fd=fopen("head.html", "r");
@@ -51,7 +51,7 @@ int cgiMain()
 	}
 	else
 	{
-		sprintf(sql, "select * from sc where id = '%s'", id[0]);
+		sprintf(sql, "select * from sc where id = '%s'", id);
     fprintf(cgiOut, "<div class=\"container\"> <h1 class=\"text-center\">%s学生成绩</h1>",id);
 
 	}

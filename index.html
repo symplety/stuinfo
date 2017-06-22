@@ -65,6 +65,10 @@
             </div>
             <div class="text-center col-md-3 col-sm-6">
                 <button>查询学生个人信息</button>
+            </div><div class="text-center col-md-3 col-sm-6">
+                <button>隐藏学生个人信息</button>
+            </div><div class="text-center col-md-3 col-sm-6">
+                <button>恢复学生个人信息</button>
             </div>
         </div>
         <ul class="forms">
@@ -296,6 +300,40 @@
                     </div>
                 </form>
             </li>
+
+
+
+            <li>
+                <form class="form-horizontal" method="get" action="/cgi-bin/sx/delornot.cgi">
+                    <div class="form-group">
+                        <label for="stuId-del" class="col-sm-2 control-label">输入要隐藏的学生Id</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="stuId" class="form-control" id="stuId-del" placeholder="输入学生Id">
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success">提交</button>
+                        <button type="reset" class="btn btn-success">重置</button>
+                    </div>
+                </form>
+            </li>
+
+          <!--  <li>
+                <form class="form-horizontal" method="get" action="/cgi-bin/sx/rest.cgi">
+                    <div class="form-group">
+                        <label for="stuId-rest" class="col-sm-2 control-label">输入要恢复的学生Id</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="stuId" class="form-control" id="stuId-rest" placeholder="输入学生Id">
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success">提交</button>
+                        <button type="reset" class="btn btn-success">重置</button>
+                    </div>
+                </form>
+            </li> -->
+
+
         </ul>
     </div>
     <script src="./public/js/jquery-3.0.0.min.js"></script>
